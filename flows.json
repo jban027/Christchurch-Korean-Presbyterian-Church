@@ -1,0 +1,1273 @@
+[
+    {
+        "id": "ca4c3fc459c84439",
+        "type": "tab",
+        "label": "Device Setup",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5da3d01b0b78d1f5",
+        "type": "tab",
+        "label": "UI24R Control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "31d7276d994e53d7",
+        "type": "tab",
+        "label": "EC-8BV Keypad",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "791279d360797239",
+        "type": "subflow",
+        "name": "Off All Buttons",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "b2033a83430e60bf"
+                    },
+                    {
+                        "id": "cdbd38e6e23f5d68"
+                    },
+                    {
+                        "id": "0817b651e907866a"
+                    },
+                    {
+                        "id": "78014c67dab144a2"
+                    },
+                    {
+                        "id": "e50c75ced8fa8bbf"
+                    },
+                    {
+                        "id": "b794ca5fdda9b3e5"
+                    },
+                    {
+                        "id": "335a9a856aaed776"
+                    },
+                    {
+                        "id": "5affaf17cefe6573"
+                    },
+                    {
+                        "id": "860a8f6367c3f091"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "9d889296997476bf",
+        "type": "subflow",
+        "name": "Off All Chan",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "2266165aeeb3c5ae"
+                    },
+                    {
+                        "id": "9ab43d84efa35e14"
+                    },
+                    {
+                        "id": "121358ec52579ae4"
+                    },
+                    {
+                        "id": "1eee558c5ee25926"
+                    },
+                    {
+                        "id": "5d5a751395b21c53"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "46a2934f016a041a",
+        "type": "group",
+        "z": "31d7276d994e53d7",
+        "name": "UI24 Input or AUX Channel Select",
+        "style": {
+            "stroke": "#3f93cf",
+            "fill": "#3f3f3f",
+            "label": true
+        },
+        "nodes": [
+            "cd16d004d40b4e0d",
+            "2c406ca2f2bb93fe",
+            "b0e82d02015e81ab",
+            "9022bfa92f5fc8b2",
+            "dd3aa8931bee536a",
+            "1fb277b4720cf01c",
+            "ed14fe8e24f79422",
+            "3ed556bb2a7151c3"
+        ],
+        "x": 114,
+        "y": 99,
+        "w": 482,
+        "h": 322
+    },
+    {
+        "id": "0e4e9f220e235f53",
+        "type": "group",
+        "z": "31d7276d994e53d7",
+        "name": "Channel 1 -4 Select",
+        "style": {
+            "stroke": "#3f93cf",
+            "fill": "#3f3f3f",
+            "label": true
+        },
+        "nodes": [
+            "dad4e22049305b39",
+            "3e1838312142956e",
+            "65af719f4ad8f15d",
+            "64dfb0b68b269d16",
+            "e9db785eb51e0d69",
+            "ce27d992bb6b29d8",
+            "c6b657b6ccf77ba4",
+            "ab6bc17823975414",
+            "1f069275d233200d",
+            "c9c89f596226fb0a",
+            "bb38473611b38d36",
+            "e652ab717d1a69fd",
+            "7e9a5f46805001eb",
+            "5ae26b6cda767708",
+            "89b8191778a7e9d7",
+            "db4d5bf715861a69"
+        ],
+        "x": 714,
+        "y": 99,
+        "w": 472,
+        "h": 682
+    },
+    {
+        "id": "df1f685c8e375ca0",
+        "type": "group",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Startup Comms",
+        "style": {
+            "stroke": "#3f93cf",
+            "fill": "#3f3f3f",
+            "label": true
+        },
+        "nodes": [
+            "8e5754b2b2e7404f",
+            "b206c0a8bc176546",
+            "3a6d821b7b6943c3"
+        ],
+        "x": 114,
+        "y": 59,
+        "w": 472,
+        "h": 122
+    },
+    {
+        "id": "141ff33bc2636d60",
+        "type": "group",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Heartbeat Comms",
+        "style": {
+            "stroke": "#3f93cf",
+            "fill": "#3f3f3f",
+            "label": true
+        },
+        "nodes": [
+            "bf62ac76dc6d9d04",
+            "023126afe9c71564"
+        ],
+        "x": 114,
+        "y": 199,
+        "w": 442,
+        "h": 82
+    },
+    {
+        "id": "b2033a83430e60bf",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 1 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/1/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdbd38e6e23f5d68",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 2 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/2/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0817b651e907866a",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 3 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/3/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78014c67dab144a2",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 4 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/4/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e50c75ced8fa8bbf",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 5 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/5/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b794ca5fdda9b3e5",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 6 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/6/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "335a9a856aaed776",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 7 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/7/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5affaf17cefe6573",
+        "type": "Command",
+        "z": "791279d360797239",
+        "name": "Btn 8 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/8/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 300,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "860a8f6367c3f091",
+        "type": "function",
+        "z": "791279d360797239",
+        "name": "set currentChan = 0",
+        "func": "global.set(\"currentChan\", \"0\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2266165aeeb3c5ae",
+        "type": "Command",
+        "z": "9d889296997476bf",
+        "name": "Btn 5 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/5/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 260,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ab43d84efa35e14",
+        "type": "Command",
+        "z": "9d889296997476bf",
+        "name": "Btn 6 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/6/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 260,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "121358ec52579ae4",
+        "type": "Command",
+        "z": "9d889296997476bf",
+        "name": "Btn 7 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/7/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 260,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1eee558c5ee25926",
+        "type": "Command",
+        "z": "9d889296997476bf",
+        "name": "Btn 8 Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/8/state",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 260,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d5a751395b21c53",
+        "type": "Command",
+        "z": "9d889296997476bf",
+        "name": "Dial Off",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//dial/button",
+            "onebased": false,
+            "args": "RELEASE",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 250,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56d34087f7504fa4",
+        "type": "Controller",
+        "z": "ca4c3fc459c84439",
+        "name": "Controller",
+        "mojo": {
+            "controller": "192.168.245.56:80",
+            "protocol": "http",
+            "host": "192.168.245.56",
+            "port": 80,
+            "username": "admin",
+            "password": "admin"
+        },
+        "x": 180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5a237df3d9be15b3",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "AUX Volume (0-99)",
+        "func": "// Example static input (can also be set dynamically)\nlet cParam1 = \"a\";\n\n// Get channel (e.g., 0–3) from global context\nlet cParam2 = global.get(\"currentChan\");\n\n// Get numeric mix level from msg.payload\nlet cParam3 = parseInt(msg.payload);\n\n// Format mix value as \"0.0X\" or \"0.XX\"\nlet mixValue = cParam3 < 10 ? `0.0${cParam3}` : `0.${cParam3}`;\n\n// Construct the command buffer\nlet command = Buffer.from(`SETD^${cParam1}.${cParam2}.mix^${mixValue}\\n`, \"ascii\");\n\n// Send as output\nreturn { payload: command };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 440,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "c6a25797451d66e1",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Unmute Selected Chan",
+        "func": "// Example inputs (you can pass these in msg or set as context/global variables)\nlet cParam1 = \"a\";\nlet cParam3 = parseInt(msg.payload); // assuming cParam3 is passed in msg.payload\n\n// Loop from 0 to 7 for cParam2\nfor (let cParam2 = 0; cParam2 < 8; cParam2++) {\n\n    let command = \"\";\n\n    if(cParam2 != cParam3) {\n        command = `SETD^${cParam1}.${cParam2}.mute^1\\r`; //MUTE ON\n    }\n    else {\n        command = `SETD^${cParam1}.${cParam2}.mute^0\\r`; //MUTE OFF\n    }\n    \n    // Send this out via another output, or collect them\n    node.send({ payload: command });\n}\nreturn null; // We already used node.send inside the loop\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 660,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "8e5754b2b2e7404f",
+        "type": "inject",
+        "z": "5da3d01b0b78d1f5",
+        "g": "df1f685c8e375ca0",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "b206c0a8bc176546",
+                "3a6d821b7b6943c3"
+            ]
+        ]
+    },
+    {
+        "id": "b206c0a8bc176546",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "g": "df1f685c8e375ca0",
+        "name": "GET /raw HTTP1.1",
+        "func": "msg.payload = Buffer.from(\"GET /raw HTTP1.1\\n\\n\", \"ascii\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "0cdfae6008695e7b",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Mute Chan 0 - 4",
+        "func": "// Example inputs (you can pass these in msg or set as context/global variables)\nlet cParam1 = \"a\";\nlet cParam3 = parseInt(msg.payload); // assuming cParam3 is passed in msg.payload\n\n// Loop from 0 to 7 for cParam2\nfor (let cParam2 = 0; cParam2 < 5; cParam2++) {\n\n    let command = \"\";\n    command = `SETD^${cParam1}.${cParam2}.mute^1\\r`; //MUTE ON\n    \n    // Send this out via another output, or collect them\n    node.send({ payload: command });\n}\nreturn null; // We already used node.send inside the loop\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "e436fc8b17195df7",
+        "type": "tcp request",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Soundcraft UI24R",
+        "server": "192.168.245.30",
+        "port": "80",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 1390,
+        "y": 320,
+        "wires": [
+            [
+                "5183a33e13c2b957"
+            ]
+        ]
+    },
+    {
+        "id": "5183a33e13c2b957",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "If feedback",
+        "func": "if (msg.payload != null) {\n    msg.payload = \"True\";\n} else {\n    msg.payload = \"False\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 320,
+        "wires": [
+            [
+                "7d3383936abf3373"
+            ]
+        ]
+    },
+    {
+        "id": "423161098c681ecb",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Input Volume (0-99)",
+        "func": "// Example static input (can also be set dynamically)\nlet cParam1 = \"i\";\n\n// Get channel (e.g., 0–3) from global context\nlet cParam2 = global.get(\"currentChan\");\n\n// Get numeric mix level from msg.payload\nlet cParam3 = parseInt(msg.payload);\n\n// Format mix value as \"0.0X\" or \"0.XX\"\nlet mixValue = cParam3 < 10 ? `0.0${cParam3}` : `0.${cParam3}`;\n\n// Construct the command buffer\nlet command = Buffer.from(`SETD^${cParam1}.${cParam2}.mix^${mixValue}\\n`, \"ascii\");\n\n// Send as output\nreturn { payload: command };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 480,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "7d3383936abf3373",
+        "type": "debug",
+        "z": "5da3d01b0b78d1f5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5279132ddd1efba1",
+        "type": "switch",
+        "z": "5da3d01b0b78d1f5",
+        "name": "",
+        "property": "\"currentBtn\"",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "aux",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "input",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "5a237df3d9be15b3"
+            ],
+            [
+                "423161098c681ecb"
+            ]
+        ]
+    },
+    {
+        "id": "6fb442c44bc8f566",
+        "type": "Event",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Vol Dial",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//dial/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Integer",
+            "normalized": false
+        },
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "aa5385f61f21dae7"
+            ]
+        ]
+    },
+    {
+        "id": "aa5385f61f21dae7",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Vol Range Convert",
+        "func": "// Assume msg.payload is a number between 0 and 200\nlet input = msg.payload;\n\n// Clamp input to stay within expected range\ninput = Math.max(0, Math.min(200, input));\n\n// Scale it to 0–100\nlet output = (input / 200) * 100;\n\n// Set the output value\nmsg.payload = output;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "5279132ddd1efba1"
+            ]
+        ]
+    },
+    {
+        "id": "05c6ad836af1f527",
+        "type": "Event",
+        "z": "5da3d01b0b78d1f5",
+        "name": "Dial Btn",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//dial/button",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "Any"
+        },
+        "x": 190,
+        "y": 640,
+        "wires": [
+            [
+                "67592460c28f709a",
+                "a6d317fc18f0fcc7"
+            ]
+        ]
+    },
+    {
+        "id": "67592460c28f709a",
+        "type": "debug",
+        "z": "5da3d01b0b78d1f5",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a6d317fc18f0fcc7",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "name": "function 1",
+        "func": "\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a6d821b7b6943c3",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "g": "df1f685c8e375ca0",
+        "name": "set muteState = 0 for all",
+        "func": "let muteState = [0,0,0,0];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "023126afe9c71564",
+        "type": "inject",
+        "z": "5da3d01b0b78d1f5",
+        "g": "141ff33bc2636d60",
+        "name": "",
+        "props": [],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "bf62ac76dc6d9d04"
+            ]
+        ]
+    },
+    {
+        "id": "bf62ac76dc6d9d04",
+        "type": "function",
+        "z": "5da3d01b0b78d1f5",
+        "g": "141ff33bc2636d60",
+        "name": "Check Comms Alive",
+        "func": "msg.payload = Buffer.from(\"ALIVE\\n\", \"ascii\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "e436fc8b17195df7"
+            ]
+        ]
+    },
+    {
+        "id": "cd16d004d40b4e0d",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "set currentBtn = input",
+        "func": "global.set(\"currentBtn\", \"input\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c406ca2f2bb93fe",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "Btn 1 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/1/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "cd16d004d40b4e0d",
+                "b0e82d02015e81ab",
+                "9022bfa92f5fc8b2"
+            ]
+        ]
+    },
+    {
+        "id": "b0e82d02015e81ab",
+        "type": "subflow:791279d360797239",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "",
+        "x": 450,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9022bfa92f5fc8b2",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "Btn 1 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/1/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 440,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd3aa8931bee536a",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "set currentBtn = aux",
+        "func": "global.set(\"currentBtn\", \"aux\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fb277b4720cf01c",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "Btn 2 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/2/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "dd3aa8931bee536a",
+                "ed14fe8e24f79422",
+                "3ed556bb2a7151c3"
+            ]
+        ]
+    },
+    {
+        "id": "ed14fe8e24f79422",
+        "type": "subflow:791279d360797239",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "",
+        "x": 450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3ed556bb2a7151c3",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "46a2934f016a041a",
+        "name": "Btn 2 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/2/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 440,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dad4e22049305b39",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "set currentChan = 0",
+        "func": "global.set(\"currentChan\", \"0\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e1838312142956e",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 5 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/5/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 810,
+        "y": 140,
+        "wires": [
+            [
+                "dad4e22049305b39",
+                "65af719f4ad8f15d",
+                "64dfb0b68b269d16"
+            ]
+        ]
+    },
+    {
+        "id": "65af719f4ad8f15d",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 5 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/5/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1040,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64dfb0b68b269d16",
+        "type": "subflow:9d889296997476bf",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "",
+        "x": 1050,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e9db785eb51e0d69",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "set currentChan = 1",
+        "func": "global.set(\"currentChan\", \"1\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce27d992bb6b29d8",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 6 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/6/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "e9db785eb51e0d69",
+                "c6b657b6ccf77ba4",
+                "ab6bc17823975414"
+            ]
+        ]
+    },
+    {
+        "id": "c6b657b6ccf77ba4",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 6 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/6/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab6bc17823975414",
+        "type": "subflow:9d889296997476bf",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "",
+        "x": 1050,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1f069275d233200d",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "set currentChan = 2",
+        "func": "global.set(\"currentChan\", \"2\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9c89f596226fb0a",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 7 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/7/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 810,
+        "y": 500,
+        "wires": [
+            [
+                "1f069275d233200d",
+                "bb38473611b38d36",
+                "e652ab717d1a69fd"
+            ]
+        ]
+    },
+    {
+        "id": "bb38473611b38d36",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 7 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/7/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1040,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e652ab717d1a69fd",
+        "type": "subflow:9d889296997476bf",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "",
+        "x": 1050,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "7e9a5f46805001eb",
+        "type": "function",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "set currentChan = 3",
+        "func": "global.set(\"currentChan\", \"3\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ae26b6cda767708",
+        "type": "Event",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 8 Watch",
+        "mojo": {
+            "device": "dvKeypad",
+            "event": "//button/8/state",
+            "onebased": false,
+            "eventKind": "Parameter",
+            "paramType": "Enumeration",
+            "enumParamFilter": "PRESS"
+        },
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "7e9a5f46805001eb",
+                "89b8191778a7e9d7",
+                "db4d5bf715861a69"
+            ]
+        ]
+    },
+    {
+        "id": "89b8191778a7e9d7",
+        "type": "Command",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "Btn 8 On",
+        "mojo": {
+            "device": "dvKeypad",
+            "command": "//button/8/state",
+            "onebased": false,
+            "args": "PRESS",
+            "cmdvalue": "Manual configuration"
+        },
+        "x": 1040,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db4d5bf715861a69",
+        "type": "subflow:9d889296997476bf",
+        "z": "31d7276d994e53d7",
+        "g": "0e4e9f220e235f53",
+        "name": "",
+        "x": 1050,
+        "y": 700,
+        "wires": []
+    }
+]
